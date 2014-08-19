@@ -22,7 +22,7 @@ namespace Evolver.Base
 				Console.WriteLine("\nPress enter to step the program, type q to quit.");
 				Console.Write("--> ");
 				s = Console.ReadLine();
-			} while (!s.Trim().Equals("q"));
+			} while (s != null && !s.Trim().Equals("q"));
 			
 
 			
