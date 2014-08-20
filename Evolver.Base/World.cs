@@ -12,9 +12,8 @@ namespace Evolver.Base
 		private WorldObject[,] grid;
 		
 		//Sizes
-		private int x, y;
-		public int X { get { return x; }}
-		public int Y { get { return y; }}
+		public int X { get; private set; }
+		public int Y { get; private set; }
 
 		//WorldObject indexer
 		public WorldObject this[int x, int y]
@@ -27,14 +26,14 @@ namespace Evolver.Base
 			//terrain = new GroundTile.TerrainType[xSize, ySize];
 			//foreach ()
 
-			x = xSize;
-			y = ySize;
+			X = xSize;
+			Y = ySize;
 
-			grid = new WorldObject[x, y];
+			grid = new WorldObject[X, Y];
 
 			Random rand = new Random();
-			for (int q = 0; q < x; q++)
-				for (int r = 0; r < y; r++)
+			for (int q = 0; q < X; q++)
+				for (int r = 0; r < Y; r++)
 					if (rand.Next(100) < 30)
 						grid[q, r] = new WorldObject();
 		}
