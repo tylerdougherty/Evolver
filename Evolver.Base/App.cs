@@ -34,9 +34,9 @@ namespace Evolver.Base
 			{
 				for (int j = 0; j < w.Y; j++)
 					if (w[i, j] == null)
-						Console.Write("0");
+						Console.Write("O");
 					else
-						Console.Write("-");
+						Console.Write("+");
 
 				Console.WriteLine();
 			}

@@ -7,5 +7,6 @@ namespace Evolver.Base
 {
 	class WorldObject
 	{
+		public virtual void Act();
 	}
 }
